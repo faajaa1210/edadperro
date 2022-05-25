@@ -8,46 +8,48 @@
     <title>Document</title>
 </head>
 <body>
-    <header><h1>Edad de tu Perro</h1></header>
-    <section class="calculos">
-        <br><br>
-        <input type="number" id="n1">
+    <body>
+    
+        <header><h1>Cual es  la Edad de tu perro</h1></header>
+        <center><img src="isa.jpg" width="250" style="width: 15%"></center>
+            <section class="res">
+
+            <label for="fname" >Nombre de la mascota:</label>
+            <input class=n2 type="text" id="nombre"><br><br>
+            <label for="lname">Cuantos años tiene:</label>
+            <input class=n2 type="number" id="nro1"><br><br>
+    
+            <button  class="bot" id="btn2">por 7</button>
+            <button  class="bot" id="btn">por log</button>
+                <h2>Resultado del Calculo:</p>
+             <div id="resultado"></div>
+             <script>
+                
+                var s=document.getElementById('btn');
+                s.addEventListener('click',suma);
+                var t=document.getElementById('btn2');
+                t.addEventListener('click',siete);
+                function suma() 
+              {
+               var n1=parseInt(document.getElementById('nro1').value);
+               
+                    var s= Math.log(n1)*16+31
+                    
+               
+               document.getElementById("resultado").innerHTML = document.getElementById('nombre').value+" " +" Tiene "+s.toFixed(0)+"Años Humanos"
+              }
+              function siete() 
+              {
+               var n1=parseInt(document.getElementById('nro1').value);
+               
+                    var a= n1*7
+                    
+               
+               document.getElementById("resultado").innerHTML = document.getElementById('nombre').value+" "+" Tiene "+a.toFixed(0)+"Años Humanos"
+              }
         
-        <button class="button" id="btn1">metodo 7</button>
-        <button class="button" id="btn2">metodo log</button>
-        
-
-        <br><br>
-                <h2>
-
-                    <div id="resultado"></div>
-                    <br>
-                    <img src="isa.jpg" width="600" height="1000">
-
-                    <script>
-                        //  ------------------ metodo 7
-                        var b = document.getElementById('btn1');
-                        b.addEventListener('click', siete);
-
-                        function siete() {
-                            var nr1 = parseInt(document.getElementById('n1').value);
-
-                            var s = nr1 * 7;
-                            document.getElementById("resultado").innerHTML = "koki tiene: " + s + " años humanos"
-                        }
-                        //  ------------------ metodo ln
-                        var r = document.getElementById('btn2');
-                        r.addEventListener('click', lnm);
-
-                        function lnm() {
-                            var nr1 = parseInt(document.getElementById('n1').value);
-                            
-                            let s = 16 * Math.log(nr1) + 31;
-
-                            document.getElementById("resultado").innerHTML = "koki tiene: " + s.toFixed(0) + " años humanos"
-                        }
-
-                    </script>
-</section>
+            </script>
+            </section>
+    </body>
 </body>
 </html>
